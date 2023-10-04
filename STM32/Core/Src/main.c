@@ -91,15 +91,15 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int NUM[12][12],i,j;
+  int NUM[12][12],i,j,h;
       for (i=0;i<12;i++)
       {
       for (j=0;j<12;j++)
       {
       	NUM[i][j]=0;}
-        NUM[i][i]=1;
+        NUM[i][i]=0;
       }
-      void display12SEG(int num)
+      void setNumberOnClock(int num)
      		  {
      		  	HAL_GPIO_WritePin ( a_GPIO_Port , a_Pin  ,NUM[num] [0] );
      		  	HAL_GPIO_WritePin ( b_GPIO_Port , b_Pin  ,NUM[num] [1] );
@@ -116,9 +116,10 @@ int main(void)
      		  };
   while (1)
   {
-	  if(i>=12) i=0;
-	    	  display12SEG(i++);
-	    	  HAL_Delay(1000);
+	  h=0+rand()%12;
+	  NUM[h][h]=1;
+	  setNumberOnClock(h);
+	   HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
