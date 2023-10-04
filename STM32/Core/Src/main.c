@@ -97,9 +97,9 @@ int main(void)
       for (j=0;j<12;j++)
       {
       	NUM[i][j]=0;}
-        NUM[i][i]=1;
+        NUM[i][i]=0;
       }
-      void display12SEG(int num)
+      void clearALLClock(int num)
      		  {
      		  	HAL_GPIO_WritePin ( a_GPIO_Port , a_Pin  ,NUM[num] [0] );
      		  	HAL_GPIO_WritePin ( b_GPIO_Port , b_Pin  ,NUM[num] [1] );
@@ -117,7 +117,7 @@ int main(void)
   while (1)
   {
 	  if(i>=12) i=0;
-	    	  display12SEG(i++);
+	    	  clearALLClock(i++);
 	    	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */

@@ -39,9 +39,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000045ba  00000000  00000000  00039bcf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0007990b  00000000  00000000  0003e189  2**0
+ 18 .debug_str    0007990c  00000000  00000000  0003e189  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000053  00000000  00000000  000b7a94  2**0
+ 19 .comment      00000053  00000000  00000000  000b7a95  2**0
                   CONTENTS, READONLY
  20 .debug_frame  00000d58  00000000  00000000  000b7ae8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -76,12 +76,12 @@ Disassembly of section .text:
  8000144:	20000010 	.word	0x20000010
  8000148:	08001364 	.word	0x08001364
 
-0800014c <display12SEG.5438>:
+0800014c <clearALLClock.5438>:
       {
       	NUM[i][j]=0;}
-        NUM[i][i]=1;
+        NUM[i][i]=0;
       }
-      void display12SEG(int num)
+      void clearALLClock(int num)
      		  {
  800014c:	b590      	push	{r4, r7, lr}
  800014e:	b083      	sub	sp, #12
@@ -100,7 +100,7 @@ Disassembly of section .text:
  8000168:	b2db      	uxtb	r3, r3
  800016a:	461a      	mov	r2, r3
  800016c:	2101      	movs	r1, #1
- 800016e:	4852      	ldr	r0, [pc, #328]	; (80002b8 <display12SEG.5438+0x16c>)
+ 800016e:	4852      	ldr	r0, [pc, #328]	; (80002b8 <clearALLClock.5438+0x16c>)
  8000170:	f000 fcd8 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( b_GPIO_Port , b_Pin  ,NUM[num] [1] );
  8000174:	687a      	ldr	r2, [r7, #4]
@@ -114,7 +114,7 @@ Disassembly of section .text:
  8000184:	b2db      	uxtb	r3, r3
  8000186:	461a      	mov	r2, r3
  8000188:	2102      	movs	r1, #2
- 800018a:	484b      	ldr	r0, [pc, #300]	; (80002b8 <display12SEG.5438+0x16c>)
+ 800018a:	484b      	ldr	r0, [pc, #300]	; (80002b8 <clearALLClock.5438+0x16c>)
  800018c:	f000 fcca 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( c_GPIO_Port , c_Pin  ,NUM[num] [2] );
  8000190:	687a      	ldr	r2, [r7, #4]
@@ -128,7 +128,7 @@ Disassembly of section .text:
  80001a0:	b2db      	uxtb	r3, r3
  80001a2:	461a      	mov	r2, r3
  80001a4:	2104      	movs	r1, #4
- 80001a6:	4844      	ldr	r0, [pc, #272]	; (80002b8 <display12SEG.5438+0x16c>)
+ 80001a6:	4844      	ldr	r0, [pc, #272]	; (80002b8 <clearALLClock.5438+0x16c>)
  80001a8:	f000 fcbc 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( d_GPIO_Port , d_Pin  ,NUM[num] [3] );
  80001ac:	687a      	ldr	r2, [r7, #4]
@@ -142,7 +142,7 @@ Disassembly of section .text:
  80001bc:	b2db      	uxtb	r3, r3
  80001be:	461a      	mov	r2, r3
  80001c0:	2108      	movs	r1, #8
- 80001c2:	483d      	ldr	r0, [pc, #244]	; (80002b8 <display12SEG.5438+0x16c>)
+ 80001c2:	483d      	ldr	r0, [pc, #244]	; (80002b8 <clearALLClock.5438+0x16c>)
  80001c4:	f000 fcae 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( e_GPIO_Port , e_Pin  ,NUM[num] [4] );
  80001c8:	687a      	ldr	r2, [r7, #4]
@@ -156,7 +156,7 @@ Disassembly of section .text:
  80001d8:	b2db      	uxtb	r3, r3
  80001da:	461a      	mov	r2, r3
  80001dc:	2110      	movs	r1, #16
- 80001de:	4836      	ldr	r0, [pc, #216]	; (80002b8 <display12SEG.5438+0x16c>)
+ 80001de:	4836      	ldr	r0, [pc, #216]	; (80002b8 <clearALLClock.5438+0x16c>)
  80001e0:	f000 fca0 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( f_GPIO_Port , f_Pin  ,NUM[num] [5] );
  80001e4:	687a      	ldr	r2, [r7, #4]
@@ -170,7 +170,7 @@ Disassembly of section .text:
  80001f4:	b2db      	uxtb	r3, r3
  80001f6:	461a      	mov	r2, r3
  80001f8:	2120      	movs	r1, #32
- 80001fa:	482f      	ldr	r0, [pc, #188]	; (80002b8 <display12SEG.5438+0x16c>)
+ 80001fa:	482f      	ldr	r0, [pc, #188]	; (80002b8 <clearALLClock.5438+0x16c>)
  80001fc:	f000 fc92 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( g_GPIO_Port , g_Pin  ,NUM[num] [6] );
  8000200:	687a      	ldr	r2, [r7, #4]
@@ -184,7 +184,7 @@ Disassembly of section .text:
  8000210:	b2db      	uxtb	r3, r3
  8000212:	461a      	mov	r2, r3
  8000214:	2140      	movs	r1, #64	; 0x40
- 8000216:	4828      	ldr	r0, [pc, #160]	; (80002b8 <display12SEG.5438+0x16c>)
+ 8000216:	4828      	ldr	r0, [pc, #160]	; (80002b8 <clearALLClock.5438+0x16c>)
  8000218:	f000 fc84 	bl	8000b24 <HAL_GPIO_WritePin>
      		  	HAL_GPIO_WritePin ( h_GPIO_Port , h_Pin  ,NUM[num] [7] );
  800021c:	687a      	ldr	r2, [r7, #4]
@@ -198,7 +198,7 @@ Disassembly of section .text:
  800022c:	b2db      	uxtb	r3, r3
  800022e:	461a      	mov	r2, r3
  8000230:	2180      	movs	r1, #128	; 0x80
- 8000232:	4821      	ldr	r0, [pc, #132]	; (80002b8 <display12SEG.5438+0x16c>)
+ 8000232:	4821      	ldr	r0, [pc, #132]	; (80002b8 <clearALLClock.5438+0x16c>)
  8000234:	f000 fc76 	bl	8000b24 <HAL_GPIO_WritePin>
      		    HAL_GPIO_WritePin ( i_GPIO_Port , i_Pin  ,NUM[num] [8] );
  8000238:	687a      	ldr	r2, [r7, #4]
@@ -212,7 +212,7 @@ Disassembly of section .text:
  8000248:	b2db      	uxtb	r3, r3
  800024a:	461a      	mov	r2, r3
  800024c:	f44f 7180 	mov.w	r1, #256	; 0x100
- 8000250:	4819      	ldr	r0, [pc, #100]	; (80002b8 <display12SEG.5438+0x16c>)
+ 8000250:	4819      	ldr	r0, [pc, #100]	; (80002b8 <clearALLClock.5438+0x16c>)
  8000252:	f000 fc67 	bl	8000b24 <HAL_GPIO_WritePin>
      		    HAL_GPIO_WritePin ( k_GPIO_Port , k_Pin  ,NUM[num] [9] );
  8000256:	687a      	ldr	r2, [r7, #4]
@@ -226,7 +226,7 @@ Disassembly of section .text:
  8000266:	b2db      	uxtb	r3, r3
  8000268:	461a      	mov	r2, r3
  800026a:	f44f 7100 	mov.w	r1, #512	; 0x200
- 800026e:	4812      	ldr	r0, [pc, #72]	; (80002b8 <display12SEG.5438+0x16c>)
+ 800026e:	4812      	ldr	r0, [pc, #72]	; (80002b8 <clearALLClock.5438+0x16c>)
  8000270:	f000 fc58 	bl	8000b24 <HAL_GPIO_WritePin>
      		    HAL_GPIO_WritePin ( l_GPIO_Port , l_Pin  ,NUM[num] [10] );
  8000274:	687a      	ldr	r2, [r7, #4]
@@ -240,7 +240,7 @@ Disassembly of section .text:
  8000284:	b2db      	uxtb	r3, r3
  8000286:	461a      	mov	r2, r3
  8000288:	f44f 6180 	mov.w	r1, #1024	; 0x400
- 800028c:	480a      	ldr	r0, [pc, #40]	; (80002b8 <display12SEG.5438+0x16c>)
+ 800028c:	480a      	ldr	r0, [pc, #40]	; (80002b8 <clearALLClock.5438+0x16c>)
  800028e:	f000 fc49 	bl	8000b24 <HAL_GPIO_WritePin>
      		    HAL_GPIO_WritePin ( m_GPIO_Port , m_Pin  ,NUM[num] [11] );
  8000292:	687a      	ldr	r2, [r7, #4]
@@ -254,7 +254,7 @@ Disassembly of section .text:
  80002a2:	b2db      	uxtb	r3, r3
  80002a4:	461a      	mov	r2, r3
  80002a6:	f44f 6100 	mov.w	r1, #2048	; 0x800
- 80002aa:	4803      	ldr	r0, [pc, #12]	; (80002b8 <display12SEG.5438+0x16c>)
+ 80002aa:	4803      	ldr	r0, [pc, #12]	; (80002b8 <clearALLClock.5438+0x16c>)
  80002ac:	f000 fc3a 	bl	8000b24 <HAL_GPIO_WritePin>
      		  };
  80002b0:	bf00      	nop
@@ -304,13 +304,13 @@ int main(void)
  800030e:	f8d7 3248 	ldr.w	r3, [r7, #584]	; 0x248
  8000312:	2b0b      	cmp	r3, #11
  8000314:	dde9      	ble.n	80002ea <main+0x2e>
-        NUM[i][i]=1;
+        NUM[i][i]=0;
  8000316:	1d3a      	adds	r2, r7, #4
  8000318:	f8d7 324c 	ldr.w	r3, [r7, #588]	; 0x24c
  800031c:	2134      	movs	r1, #52	; 0x34
  800031e:	fb01 f303 	mul.w	r3, r1, r3
  8000322:	4413      	add	r3, r2
- 8000324:	2201      	movs	r2, #1
+ 8000324:	2200      	movs	r2, #0
  8000326:	601a      	str	r2, [r3, #0]
       for (i=0;i<12;i++)
  8000328:	f8d7 324c 	ldr.w	r3, [r7, #588]	; 0x24c
@@ -327,14 +327,14 @@ int main(void)
  8000340:	dd02      	ble.n	8000348 <main+0x8c>
  8000342:	2300      	movs	r3, #0
  8000344:	f8c7 324c 	str.w	r3, [r7, #588]	; 0x24c
-	    	  display12SEG(i++);
+	    	  clearALLClock(i++);
  8000348:	f8d7 324c 	ldr.w	r3, [r7, #588]	; 0x24c
  800034c:	1c5a      	adds	r2, r3, #1
  800034e:	f8c7 224c 	str.w	r2, [r7, #588]	; 0x24c
  8000352:	1d3a      	adds	r2, r7, #4
  8000354:	4694      	mov	ip, r2
  8000356:	4618      	mov	r0, r3
- 8000358:	f7ff fef8 	bl	800014c <display12SEG.5438>
+ 8000358:	f7ff fef8 	bl	800014c <clearALLClock.5438>
 	    	  HAL_Delay(1000);
  800035c:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
  8000360:	f000 f95e 	bl	8000620 <HAL_Delay>
