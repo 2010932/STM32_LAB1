@@ -78,8 +78,8 @@ Disassembly of section .text:
 
 0800014c <setNumberOnClock.5439>:
       {
-      	NUM[i][j]=0;}
-        NUM[i][i]=0;
+      	NUM[i][j]=1;}
+        NUM[i][i]=1;
       }
       void setNumberOnClock(int num)
      		  {
@@ -286,7 +286,7 @@ int main(void)
  80002e2:	2300      	movs	r3, #0
  80002e4:	f8c7 3248 	str.w	r3, [r7, #584]	; 0x248
  80002e8:	e011      	b.n	800030e <main+0x52>
-      	NUM[i][j]=0;}
+      	NUM[i][j]=1;}
  80002ea:	4639      	mov	r1, r7
  80002ec:	f8d7 224c 	ldr.w	r2, [r7, #588]	; 0x24c
  80002f0:	4613      	mov	r3, r2
@@ -295,7 +295,7 @@ int main(void)
  80002f6:	009b      	lsls	r3, r3, #2
  80002f8:	f8d7 2248 	ldr.w	r2, [r7, #584]	; 0x248
  80002fc:	4413      	add	r3, r2
- 80002fe:	2200      	movs	r2, #0
+ 80002fe:	2201      	movs	r2, #1
  8000300:	f841 2023 	str.w	r2, [r1, r3, lsl #2]
       for (j=0;j<12;j++)
  8000304:	f8d7 3248 	ldr.w	r3, [r7, #584]	; 0x248
@@ -304,13 +304,13 @@ int main(void)
  800030e:	f8d7 3248 	ldr.w	r3, [r7, #584]	; 0x248
  8000312:	2b0b      	cmp	r3, #11
  8000314:	dde9      	ble.n	80002ea <main+0x2e>
-        NUM[i][i]=0;
+        NUM[i][i]=1;
  8000316:	463a      	mov	r2, r7
  8000318:	f8d7 324c 	ldr.w	r3, [r7, #588]	; 0x24c
  800031c:	2134      	movs	r1, #52	; 0x34
  800031e:	fb01 f303 	mul.w	r3, r1, r3
  8000322:	4413      	add	r3, r2
- 8000324:	2200      	movs	r2, #0
+ 8000324:	2201      	movs	r2, #1
  8000326:	601a      	str	r2, [r3, #0]
       for (i=0;i<12;i++)
  8000328:	f8d7 324c 	ldr.w	r3, [r7, #588]	; 0x24c
@@ -335,13 +335,13 @@ int main(void)
  8000352:	009b      	lsls	r3, r3, #2
  8000354:	1ad3      	subs	r3, r2, r3
  8000356:	f8c7 3244 	str.w	r3, [r7, #580]	; 0x244
-	  NUM[h][h]=1;
+	  NUM[h][h]=0;
  800035a:	463a      	mov	r2, r7
  800035c:	f8d7 3244 	ldr.w	r3, [r7, #580]	; 0x244
  8000360:	2134      	movs	r1, #52	; 0x34
  8000362:	fb01 f303 	mul.w	r3, r1, r3
  8000366:	4413      	add	r3, r2
- 8000368:	2201      	movs	r2, #1
+ 8000368:	2200      	movs	r2, #0
  800036a:	601a      	str	r2, [r3, #0]
 	  setNumberOnClock(h);
  800036c:	463b      	mov	r3, r7

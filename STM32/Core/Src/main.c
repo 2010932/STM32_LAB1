@@ -96,8 +96,8 @@ int main(void)
       {
       for (j=0;j<12;j++)
       {
-      	NUM[i][j]=0;}
-        NUM[i][i]=0;
+      	NUM[i][j]=1;}
+        NUM[i][i]=1;
       }
       void setNumberOnClock(int num)
      		  {
@@ -117,7 +117,7 @@ int main(void)
   while (1)
   {
 	  h=0+rand()%12;
-	  NUM[h][h]=1;
+	  NUM[h][h]=0;
 	  setNumberOnClock(h);
 	   HAL_Delay(1000);
   }
