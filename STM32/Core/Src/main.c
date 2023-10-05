@@ -96,8 +96,8 @@ int main(void)
   {
 	  switch (state){
 	      case 0:
-	          HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin  ,SET);
-	          HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin  ,RESET );
+	          HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin  ,RESET);
+	          HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin  ,SET );
 	          counter--;
 	  	if (counter<=0)
 	  		{
@@ -106,8 +106,8 @@ int main(void)
 	  		}
 	  		break;
 	      case 1:
-	          HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin  , RESET);
-	          HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin  ,SET );
+	          HAL_GPIO_WritePin ( LED_RED_GPIO_Port , LED_RED_Pin  , SET);
+	          HAL_GPIO_WritePin ( LED_YELLOW_GPIO_Port , LED_YELLOW_Pin  ,RESET );
 	          counter--;
 	          if (counter<=0)
 	      	{
