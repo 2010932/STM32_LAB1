@@ -99,7 +99,7 @@ int main(void)
       	NUM[i][j]=1;}
         NUM[i][i]=1;
       }
-      void setNumberOnClock(int num)
+      void clearNumberOnClock(int num)
      		  {
      		  	HAL_GPIO_WritePin ( a_GPIO_Port , a_Pin  ,NUM[num] [0] );
      		  	HAL_GPIO_WritePin ( b_GPIO_Port , b_Pin  ,NUM[num] [1] );
@@ -118,7 +118,7 @@ int main(void)
   {
 	  h=0+rand()%12;
 	  NUM[h][h]=0;
-	  setNumberOnClock(h);
+	  clearNumberOnClock(h);
 	   HAL_Delay(1000);
   }
   /* USER CODE END 3 */
